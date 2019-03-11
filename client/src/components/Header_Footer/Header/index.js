@@ -7,7 +7,7 @@ class Header extends Component {
 				<div className="container">
 					<div className="left">
 						<div className="logo">
-								퍼펙트 커피
+								perfect
 						</div>
 					</div>
 					<div className="right">

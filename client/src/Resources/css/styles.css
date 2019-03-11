@@ -117,7 +117,7 @@ button {
 }
 
 .error_label {
-    color: rgb(221, 38, 25);
+    color: rgb(236, 74, 62);
     display:block;
     font-size: 15px;
 }
@@ -186,7 +186,7 @@ select {
     text-transform: uppercase;
     padding: 10px;
     display: table;
-    background: #e1ddc3;
+    background: #120869;
     margin-top: 10px;
 }
 
