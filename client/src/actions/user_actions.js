@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 import { 
-	LOGIN_USER
+	LOGIN_USER,
+	REGISTER_USER
 } from './types';
 
 
@@ -24,4 +25,13 @@ export function loginUser(dataToSubmit){
 			
 		}
 	
+}
+
+export function registerUser (){
+	const request = axios.post(`${USER_SERVER}/register`, dataToSubmit)
+	.then(response => response.data);
+	return {
+		type: REGISTER_USER,
+		payload: request
+	}
 }

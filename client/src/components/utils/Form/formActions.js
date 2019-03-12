@@ -12,6 +12,12 @@ export const validate = (element, formdata = []) => {
 				
 		}
 		
+		if(element.validation.confirm){
+			const valid = element.value.trim() === formdata[element.validation.confirm].value;
+			const message = `${!valid ? '패스워드가 일치하지 않습니다' : ''}`;
+			error = !valid ? [valid, message] : error;
+		}
+		
 		
 		// validation.required가 존재하면,
 		// 하나라도 문자열 입력이 있다는 거니까
@@ -63,7 +69,12 @@ export const update = (element, formdata, formName) => {
 export const generateData = (formdata, formName) => {
 	let dataToSubmit = {}
 	for(let key in formdata){
-		dataToSubmit[key] = formdata[key].value;
+		
+		if(key !== 'confirmPassword'){
+			dataToSubmit[key] = formdata[key].value;
+		}
+		
+	
 		
 	}
 	return dataToSubmit;
